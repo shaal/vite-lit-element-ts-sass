@@ -1,0 +1,13 @@
+:host {
+
+  button {
+    &:hover {
+      border: 3px dotted green;
+    }
+    padding: 1em;
+  }
+    display: block;
+    border: solid 1px gray;
+    padding: 16px;
+    max-width: 800px;
+  }

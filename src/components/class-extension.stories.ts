@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit-Element App</title>
-    <script type="module" src="/src/components/MyElement/my-element.ts"></script>
-    <script type="module" src="/src/components/extended-element/extended-element.ts"></script>
-    <script type="module" src="/src/components/double-extended-element/double-extended-element.ts"></script>
-    <script type="module" src="/src/components/ScssExample/scss-example.ts"></script>
+import { html, TemplateResult } from 'lit';
+import './MyElement/my-element';
+import './extended-element/extended-element';
+import './double-extended-element/double-extended-element';
+import './ScssExample/scss-example';
 
-  </head>
-  <body>
+export default {
+  title: 'Code Examples/LIT Class Extension',
+};
+
+export const MyElement = (): TemplateResult => {
+  return html`
     <my-element>
       <p>This is an instance of &lt;my-element&gt;.</p>
     </my-element>
-    <hr />
+  `;
+};
+
+export const ExtendedElement = (): TemplateResult => {
+  return html`
     <extended-element>
       <p>
         This is &lt;extended-element&gt; that extends &lt;my-element&gt;. Notice
@@ -23,7 +25,11 @@
         new property, containing text, displayed below.
       </p>
     </extended-element>
-    <hr />
+  `;
+};
+
+export const DoubleExtendedElement = (): TemplateResult => {
+  return html`
     <double-extended-element>
       <p>
         This is &lt;double-extended-element&gt; that extends
@@ -32,10 +38,17 @@
         below.
       </p>
     </double-extended-element>
+  `;
+};
 
+export const SimpleExample = (): TemplateResult => {
+  return html` <my-element></my-element> `;
+};
+
+export const ScssExample = (): TemplateResult => {
+  return html`
     <scss-example>
       <p>This is an example for SCSS</p>
     </scss-example>
-
-  </body>
-</html>
+  `;
+};
