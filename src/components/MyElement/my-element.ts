@@ -4,8 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import { LitElement, html, css, TemplateResult } from 'lit';
+import { LitElement, html, TemplateResult, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import styles from './my-element.css';
+import componentStyle from '../../styles/component.css';
 
 /**
  * An example element.
@@ -15,15 +17,7 @@ import { customElement, property } from 'lit/decorators.js';
  */
 @customElement('my-element')
 export class MyElement extends LitElement {
-  static styles = css`
-    :host {
-      display: block;
-      border: solid 1px gray;
-      padding: 16px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  `;
+  static styles = unsafeCSS([styles, componentStyle]);
 
   /**
    * The name to say "Hello" to.

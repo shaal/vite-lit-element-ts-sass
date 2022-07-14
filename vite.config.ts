@@ -1,5 +1,9 @@
 import { defineConfig } from 'vite'
-import litcss from 'rollup-plugin-postcss-lit';
+// vite.config.js/ts
+// rollup.config.js
+import postcss from 'rollup-plugin-postcss';
+import postcssLit from 'rollup-plugin-postcss-lit';
+import typescript from 'rollup-plugin-typescript2';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,9 +18,10 @@ export default defineConfig({
     }
   },
   plugins: [
-    {
-      ...litcss(),
-      enforce: 'post'
-    }
-  ]
+    postcss({
+      inject: false,
+    }),
+    postcssLit(),
+    typescript(),
+  ],
 })
