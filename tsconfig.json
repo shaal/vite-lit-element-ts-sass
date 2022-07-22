@@ -16,7 +16,8 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitAny": false
   },
   "include": ["src/**/*.ts","typings/*.d.ts"],
   "exclude": ["src/**/*.stories.ts"],

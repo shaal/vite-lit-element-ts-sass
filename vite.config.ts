@@ -10,7 +10,7 @@ export default defineConfig({
   build: {
     lib: {
       // entry: 'src/components/MyElement/my-element.ts',
-      entry: 'src/components/double-extended-element/double-extended-element.ts',
+      entry: 'src/components/Menu/Menu.ts',
       formats: ['es']
     },
     rollupOptions: {

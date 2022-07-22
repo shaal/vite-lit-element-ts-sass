@@ -5,7 +5,7 @@ import {
   denormalize,
   MenuElementInterface,
   NormalizedMenuInterface,
-} from 'decoupled-menu-parser/src';
+} from 'decoupled-menu-parser';
 
 /**
  * The Drupal Menu Component
