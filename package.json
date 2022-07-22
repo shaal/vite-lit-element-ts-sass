@@ -28,6 +28,7 @@
     "@storybook/builder-vite": "^0.1.38",
     "@storybook/web-components": "^6.5.9",
     "babel-loader": "^8.2.5",
+    "decoupled-menu-parser": "https://git.drupalcode.org/project/decoupled_menu_parser.git",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-postcss-lit": "^2.0.0",
     "rollup-plugin-typescript2": "^0.32.1",
