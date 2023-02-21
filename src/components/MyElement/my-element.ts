@@ -6,8 +6,8 @@
 
 import { LitElement, html, TemplateResult, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import styles from './my-element.css';
-import componentStyle from '../../styles/component.css';
+import styles from './my-element.css?inline';
+import componentStyle from '../../styles/component.css?inline';
 
 /**
  * An example element.

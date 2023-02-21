@@ -1,5 +1,5 @@
-import styles from './scss-example.scss';
-import { LitElement, html } from 'lit';
+import styles from './scss-example.postcss?inline';
+import { LitElement, html, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 /**
@@ -10,7 +10,9 @@ import { customElement, property } from 'lit/decorators.js';
  */
 @customElement('scss-example')
 export class ScssExample extends LitElement {
-  static styles = styles;
+  // This is safe to use if the sass styles are compiled statically and without user input.
+  static styles = unsafeCSS(styles);
+
 
   /**
    * The name to say "Hello" to.
